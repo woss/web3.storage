@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import Router from 'next/router'
 import '../styles/global.css'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import Layout from '../components/layout.js'
-import countly from '../lib/countly';
+import Layout from '../components/layout'
+import countly from '../lib/countly'
+import { FilesContext } from '../lib/upload'
 
 
 const queryClient = new QueryClient({
@@ -28,12 +29,20 @@ export default function App({ Component, pageProps }) {
       countly.trackPageView(route)
     })
   }, [])
+
+  const [files, setFiles] = useState([])
   
   return (
     <QueryClientProvider client={queryClient}>
-      <Layout {...pageProps}>
-        {(props) => <Component {...pageProps} {...props} />}
-      </Layout>
+      <FilesContext.Provider value={{
+        files, 
+        // @ts-ignore
+        set: setFiles
+      }}>
+        <Layout {...pageProps}>
+          {(props) => <Component {...pageProps} {...props} />}
+        </Layout>
+      </FilesContext.Provider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   )
