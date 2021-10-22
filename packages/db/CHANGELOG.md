@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.4.0](https://www.github.com/web3-storage/web3.storage/compare/db-v2.3.1...db-v2.4.0) (2021-10-22)
+
+
+### Features
+
+* cron and pinpin rewire ([#531](https://www.github.com/web3-storage/web3.storage/issues/531)) ([9e5b42d](https://www.github.com/web3-storage/web3.storage/commit/9e5b42dc6d33bf3cf017034474981812370b366e))
+* postgres setup ([#508](https://www.github.com/web3-storage/web3.storage/issues/508)) ([cd04716](https://www.github.com/web3-storage/web3.storage/commit/cd04716844a646d986f53aeae7c73840a008aad3))
+
+
+### Bug Fixes
+
+* add mocha dev dependency to api and db ([0648527](https://www.github.com/web3-storage/web3.storage/commit/064852797e0cf56faacbfdcbf9a142973e25c663))
+* db client improvements ([#546](https://www.github.com/web3-storage/web3.storage/issues/546)) ([5deffae](https://www.github.com/web3-storage/web3.storage/commit/5deffae2ec3e6c81d90d7db10285fd051c5c1c7d))
+
+
+### Changes
+
+* api rewire ([#524](https://www.github.com/web3-storage/web3.storage/issues/524)) ([f4f9cd3](https://www.github.com/web3-storage/web3.storage/commit/f4f9cd39f0859b843067057af9bcdbf4f29063e9))
+
 ### [2.3.1](https://www.github.com/web3-storage/web3.storage/compare/db-v2.3.0...db-v2.3.1) (2021-09-28)
 
 
